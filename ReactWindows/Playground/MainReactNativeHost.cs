@@ -1,6 +1,7 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+using Newtonsoft.Json.Linq;
 using ReactNative;
 using ReactNative.Modules.Core;
 using ReactNative.Shell;
@@ -23,6 +24,8 @@ namespace Playground
 #if BUNDLE
         protected override string JavaScriptBundleFile => "ms-appx:///ReactAssets/index.windows.bundle";
 #endif
+
+        protected override JObject InitialProperties => null;
 
         protected override List<IReactPackage> Packages => new List<IReactPackage>
         {

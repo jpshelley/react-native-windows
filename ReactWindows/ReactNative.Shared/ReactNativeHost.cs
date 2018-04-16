@@ -6,6 +6,7 @@
 using ReactNative.Bridge;
 using ReactNative.Common;
 using ReactNative.Modules.Core;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -114,6 +115,11 @@ namespace ReactNative
         /// The list of <see cref="IReactPackage"/>s used by the application.
         /// </summary>
         protected abstract List<IReactPackage> Packages { get; }
+
+        /// <summary>
+        /// The initial properties to pass to the <see cref="ReactRootView"/>
+        /// </summary>
+        protected abstract JObject InitialProperties { get; }
 
         /// <summary>
         /// Creates a new root view.
